@@ -1,0 +1,17 @@
+.container {
+    margin: auto;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+.form-control {
+    text-align: center; 
+ margin: 0 0 1em 0;
+ width: 50em; 
+}
+
+#modal-title {
+    margin: auto;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Friend Finder</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/survey.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class="jumbotron jumbotron-fluid">
+        <div class="container">
+
+            <h2>Friend Finder</h2><hr>
+            <h3><strong>Survey Questions</strong></h3>
+            <h6>Name:</h6>
+            <input type="text" name="" id="name" class="form-control" required >
+
+            <h6>URL to Photo Image:</h6>
+            <input type="text" name="" id="photo" class="form-control" required >
+
+            <h6>Pizza is your favorite:</h6>
+            <select class="form-control" id="Q1">
+                <option value="" selected disabled>Please Select</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+
+            <h6>Going to the gym is important:</h6>
+            <select class="form-control" id="Q2">
+                <option value="" selected disabled>Please Select</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+
+            <h6>Soccer is better than football:</h6>
+            <select class="form-control" id="Q3">
+                <option value="" selected disabled>Please Select</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+
+            <h6>Camping during a storm:</h6>
+            <select class="form-control" id="Q4">
+                <option value="" selected disabled>Please Select</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+
+            <h6>Audi makes the best cars:</h6>
+            <select class="form-control" id="Q5">
+                <option value="" selected disabled>Please Select</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+
+            <h6>React is better than Angular:</h6>
+            <select class="form-control" id="Q6">
+                <option value="" selected disabled>Please Select</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+
+            <h6>MongoDB is easier than MySQL:</h6>
+            <select class="form-control" id="Q7">
+                <option value="" selected disabled>Please Select</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+            
+            <h6>VS Code is better than Sublime:</h6>
+            <select class="form-control" id="Q8">
+                <option value="" selected disabled>Please Select</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+
+            <h6>Techo is life:</h6>
+            <select class="form-control" id="Q9">
+                <option value="" selected disabled>Please Select</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+
+            <h6>Why fly when you can sail:</h6>
+            <select class="form-control" id="Q10">
+                <option value="" selected disabled>Please Select</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" >5 - Strongly Agree</option>
+            </select>
+            <br>
+            <br>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button>
+
+            <hr>
+            <footer class="footer">
+            <div class="container">
+                    <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/sethmarini">GitHub Repo</a></p>
+            </div>
+            </footer>
+
+        </div> <!-- End of container -->
+    </div> <!-- End of jumbotron -->
+
+	<!-- Modal -->
+        <div id="popUpModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">New Friend!</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                            <h3 id="matchTitle" src="" alt="Match Title"></h3>
+                            <h2 id="matchName"></h2>
+                            <img id="matchImg"src="" alt="Match Image"style="max-width: 100%">
+                    </div>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+	<!-- JS -->
+	<script type="text/javascript">
+ 		
+	$('#submit').on('click', function(){
+	
+		event.preventDefault();
+		let friendName = window.location.origin;	
+		let newPost = {
+				"name": $('#name').val() ,
+				"photo": $('#photo').val() ,
+				"scores": [
+							$('#Q1').val(),
+							$('#Q2').val(),
+							$('#Q3').val(),
+							$('#Q4').val(),
+							$('#Q5').val(),
+							$('#Q6').val(),
+							$('#Q7').val(),
+							$('#Q8').val(),
+							$('#Q9').val(),
+							$('#Q10').val()
+						]
+			};
+            $.post(friendName + '/api/friends', newPost).done(function(res) {
+				console.log(res);
+		
+				$('#matchName').text(res.name);
+		    	$('#matchImg').attr('src', res.photo);
+			    $('#popUpModal').modal('toggle');
+			});
+		})
+
+	</script>
+
+</body>
+</html>
